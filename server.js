@@ -20,9 +20,9 @@ app.use("/api/form", contactRouter);
 app.use("/api/data", Service);
 app.use("/api/admin", AdminRoutes);
 
-app.use(express.static(path.join(__dirname, "../client/dist")));
+app.use(express.static(path.join(__dirname, "./client/dist")));
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "../client/dist/index.html"));
+  res.sendFile(path.join(__dirname, "./client/dist/index.html"));
 });
 
 app.use(errorMiddleware);
